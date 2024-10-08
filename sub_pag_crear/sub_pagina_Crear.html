@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Formulario de Producto</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <div class="header">
+            <button class="top-button">Botón 1</button>
+            <button class="top-button">Botón 2</button>
+            <button class="top-button">Botón 3</button>
+            <input type="text" id="searchBar" placeholder="Buscar..." class="search-bar">
+        </div>
+
+        <div class="form-container">
+            <form id="productForm">
+                <label for="codigo">Código:</label>
+                <input type="text" id="codigo" name="codigo" class="input-field">
+
+                <label for="nombre">Nombre:</label>
+                <input type="text" id="nombre" name="nombre" class="input-field">
+
+                <label for="descripcion">Descripción:</label>
+                <input type="text" id="descripcion" name="descripcion" class="input-field">
+
+                <label for="categoria">Categoría:</label>
+                <select id="categoria" name="categoria" class="input-field">
+                    <option value="categoria1">Categoría 1</option>
+                    <option value="categoria2">Categoría 2</option>
+                    <option value="categoria3">Categoría 3</option>
+                </select>
+
+                <label for="disponible">Disponible:</label>
+                <select id="disponible" name="disponible" class="input-field">
+                    <option value="si">Sí</option>
+                    <option value="no">No</option>
+                </select>
+
+                <label for="precio">Precio:</label>
+                <input type="text" id="precio" name="precio" class="input-field">
+
+                <label for="imagen">Subir Imagen:</label>
+                <input type="file" id="imagen" name="imagen" class="input-field">
+
+                <div class="buttons">
+                    <button type="submit" class="action-button">Aceptar</button>
+                    <button type="reset" class="action-button">Cancelar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script src="script.js"></script>
+</body>
+</html>
