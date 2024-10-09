@@ -18,6 +18,7 @@ body {
     margin-bottom: 20px;
 }
 
+
 .top-button {
     background-color: #007bff;
     color: white;
@@ -26,15 +27,17 @@ body {
     cursor: pointer;
     margin-right: 10px;
 }
-
 .top-button:hover {
     background-color: #0056b3;
 }
 
 .search-bar {
-    width: 50%;
+    width: 100%;
     padding: 10px;
+    margin-bottom: 20px;
     font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
 }
 
 .form-container {
@@ -42,45 +45,46 @@ body {
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 20px;
 }
 
-.input-field {
+table {
     width: 100%;
+    border-collapse: collapse;
+    margin-bottom: 20px;
+}
+
+table th, table td {
     padding: 10px;
-    margin: 10px 0;
-    font-size: 16px;
-    border: 1px solid #ccc;
-    border-radius: 5px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+}
+
+table th {
+    background-color: #007bff;
+    color: white;
+}
+
+table td img {
+    width: 50px;
+    height: auto;
 }
 
 .buttons {
     display: flex;
-    justify-content: space-between;
+    justify-content: flex-end;
 }
 
 .action-button {
+    background-color: #28a745;
     color: white;
-    padding: 20px 40px;
+    padding: 10px 20px;
     border: none;
-    cursor: pointer;
     border-radius: 5px;
+    cursor: pointer;
     transition: background-color 0.3s;
 }
 
-/* Estilo del botón Aceptar (verde) */
-.accept-button {
-    background-color: #28a745;
-}
-
-.accept-button:hover {
+.action-button:hover {
     background-color: #218838;
-}
-
-/* Estilo del botón Cancelar (rojo) */
-.cancel-button {
-    background-color: #dc3545;
-}
-
-.cancel-button:hover {
-    background-color: #c82333;
 }
