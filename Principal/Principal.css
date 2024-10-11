@@ -1,0 +1,42 @@
+
+h2{
+    text-align: center;
+}
+
+h3{
+    text-align: center;
+}
+
+button{
+    background-color: antiquewhite;
+    margin-top: 320px;
+    margin-right: 5px;
+    margin-left: 50px;
+    width: 150px;
+    height: 60px;
+    border-radius: 10px;
+    border-top-style: solid;
+    text-align: center;
+    cursor: pointer;
+    font-size: 25px;
+}
+
+button:hover{
+    background-color: brown;
+}
+
+.img-1{
+    width: 450px;
+    height: 250px;
+}
+
+.contenedor{
+    text-align: center;
+    margin-top: 15px;
+    margin-bottom: -250px;
+
+}
+
+.botones{
+    text-align: center;
+}
