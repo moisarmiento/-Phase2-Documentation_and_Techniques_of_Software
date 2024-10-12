@@ -12,13 +12,14 @@ function loadProducts() {
 
         if (data.length > 0) {
             data.forEach(product => {
+                const disponibilidadTexto = product.Disponibilidad === '1' ? 'Sí' : 'No';
                 const row = `
                     <tr>
                         <td>${product.Codigo}</td>
                         <td>${product.Nombre}</td>
                         <td>${product.Descripción}</td>
                         <td>${product.Categoria}</td>
-                        <td>${product.Disponibilidad ? 'Sí' : 'No'}</td>
+                        <td>${disponibilidadTexto}</td>
                         <td>${product.Precio}</td>
                         <td><img src="${product.Imagen}" alt="${product.Nombre}" width="50"></td>
                     </tr>
