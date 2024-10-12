@@ -13,7 +13,9 @@ if ($conn->connect_error) {
 
 // Consultar los productos
 $sql = "SELECT Codigo, Nombre, Descripción, Categoria, Disponibilidad, Precio, Imagen 
-        FROM productos";
+        FROM productos
+        ORDER BY Id_Producto DESC 
+        LIMIT 5";
 $result = $conn->query($sql);
 
 // Inicializar el array de productos

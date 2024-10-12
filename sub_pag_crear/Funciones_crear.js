@@ -14,9 +14,11 @@ document.getElementById("productForm").addEventListener("submit", function(event
             messageDiv.textContent = "La información fue enviada correctamente.";
             messageDiv.style.color = "green"; 
             // Mostrar alerta de confirmación
-            if (confirm("La información fue enviada correctamente. ¿Desea continuar a la página de actualización?")) {
+            if (confirm("La información fue enviada correctamente")) {
                 // Redirigir a la página de actualización si el usuario acepta
                 cargar_actualizar_si();
+            }else {
+                cargar_crear();
             }
         } else {
             messageDiv.textContent = "Hubo un problema al enviar la información.";
@@ -31,4 +33,7 @@ document.getElementById("productForm").addEventListener("submit", function(event
 
 function cargar_actualizar_si() {
     window.location.href = 'http://localhost/fase-2-unad/-Phase2-Documentation_and_Techniques_of_Software/sub_pag_actualizar/sub_pagina_Actualizar.html';
+}
+function cargar_crear(){
+    window.location.href = 'http://localhost/fase-2-unad/-Phase2-Documentation_and_Techniques_of_Software/sub_pag_crear/sub_pagina_Crear.html';
 }

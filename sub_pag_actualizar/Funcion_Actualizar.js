@@ -4,7 +4,7 @@ function cargar_crear() {
 
 // Funcion_Actualizar.js
 function loadProducts() {
-    fetch('recupera_base_datos.php') // Asegúrate de que este archivo esté correctamente configurado
+    fetch('recupera_base_datos.php') 
     .then(response => response.json())
     .then(data => {
         const productTableBody = document.getElementById('productTableBody');
