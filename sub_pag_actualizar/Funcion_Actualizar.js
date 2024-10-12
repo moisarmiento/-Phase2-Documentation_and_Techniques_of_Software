@@ -1,10 +1,41 @@
-document.getElementById('productForm').addEventListener('submit', function(event) {
-    event.preventDefault();
-    // Aquí puedes agregar lógica para manejar el envío de datos del formulario
-    alert("Formulario enviado correctamente.");
-});
+function cargar_crear() {
+    window.location.href = 'http://localhost/fase-2-unad/-Phase2-Documentation_and_Techniques_of_Software/sub_pag_crear/sub_pagina_Crear.html';
+}
 
-document.getElementById('productForm').addEventListener('reset', function() {
-    // Lógica adicional para el botón de cancelar si es necesario
-    alert("Formulario reseteado.");
-});
+// Funcion_Actualizar.js
+function loadProducts() {
+    fetch('recupera_base_datos.php') // Asegúrate de que este archivo esté correctamente configurado
+    .then(response => response.json())
+    .then(data => {
+        const productTableBody = document.getElementById('productTableBody');
+        productTableBody.innerHTML = ''; // Limpiar la tabla antes de llenarla
+
+        if (data.length > 0) {
+            data.forEach(product => {
+                const row = `
+                    <tr>
+                        <td>${product.Codigo}</td>
+                        <td>${product.Nombre}</td>
+                        <td>${product.Descripción}</td>
+                        <td>${product.Categoria}</td>
+                        <td>${product.Disponibilidad ? 'Sí' : 'No'}</td>
+                        <td>${product.Precio}</td>
+                        <td><img src="${product.Imagen}" alt="${product.Nombre}" width="50"></td>
+                    </tr>
+                `;
+                productTableBody.innerHTML += row; // Agregar cada producto a la tabla
+            });
+        } else {
+            const row = `<tr><td colspan="7">No se encontraron productos.</td></tr>`;
+            productTableBody.innerHTML += row; // Mostrar mensaje si no hay productos
+        }
+    })
+    .catch(error => {
+        console.error('Error:', error);
+        document.getElementById('message').innerText = 'Error al cargar los productos.';
+    });
+}
+
+// Cargar los productos al cargar la página
+document.addEventListener('DOMContentLoaded', loadProducts);
+

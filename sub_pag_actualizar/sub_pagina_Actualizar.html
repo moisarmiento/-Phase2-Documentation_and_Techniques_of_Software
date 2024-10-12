@@ -8,16 +8,16 @@
 </head>
 <body>
     <div class="container">
-        <!-- Encabezado con tres botones -->
+        <!-- Encabezado con botones -->
         <div class="header">
             <button class="top-button">Leer</button>
-            <button class="top-button">Crear</button>
             <button class="top-button">Borrar</button>
+            <button class="top-button" onclick="cargar_crear()">Crear</button>
             <input type="text" id="searchBar" placeholder="Buscar..." class="search-bar">
         </div>
-
+        
         <!-- Tabla de productos -->
-        <div class="form-container">
+        <div class="table-container">
             <table border="1" width="100%" cellspacing="0" cellpadding="10">
                 <thead>
                     <tr>
@@ -30,25 +30,21 @@
                         <th>Imagen</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Producto A</td>
-                        <td>Descripción del producto A</td>
-                        <td>Categoría 1</td>
-                        <td>Disponible</td>
-                        <td>$100</td>
-                        <td><img src="Producto_control.JPG" alt="Producto A" width="50"></td>
-                    </tr>
-                    <!-- Puedes agregar más filas según sea necesario -->
+                <tbody id="productTableBody">
+                    <!-- Aquí se llenarán los productos mediante JavaScript -->
                 </tbody>
             </table>
         </div>
-
+        
         <!-- Botón de actualizar -->
         <div class="buttons">
-            <button class="action-button">Actualizar</button>
+            <button class="action-button" onclick="loadProducts()">Actualizar</button>
         </div>
+
+        <!-- Mensaje de carga -->
+        <div id="message"></div>
     </div>
+
+    <script src="Funcion_Actualizar.js"></script>
 </body>
 </html>
