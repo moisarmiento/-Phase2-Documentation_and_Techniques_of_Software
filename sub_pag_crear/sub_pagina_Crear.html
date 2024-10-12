@@ -16,7 +16,7 @@
         </div>
 
         <div class="form-container">
-            <form id="productForm">
+            <form id="productForm" enctype="multipart/form-data" action="Ingreso_de_datos.php" method="post">
                 <label for="codigo">Código:</label>
                 <input type="text" id="codigo" name="codigo" class="input-field">
 
@@ -28,9 +28,10 @@
 
                 <label for="categoria">Categoría:</label>
                 <select id="categoria" name="categoria" class="input-field">
-                    <option value="categoria1">Categoría 1</option>
-                    <option value="categoria2">Categoría 2</option>
-                    <option value="categoria3">Categoría 3</option>
+                    <option value="Electrodoméstico">Electrodoméstico</option>
+                    <option value="Herramienta">Herramienta</option>
+                    <option value="Mueble">Mueble</option>
+                    <option value="Ropa">Ropa</option>
                 </select>
 
                 <label for="disponible">Disponible:</label>
@@ -49,10 +50,12 @@
                     <button type="submit" class="action-button accept-button">Aceptar</button>
                     <button type="reset" class="action-button cancel-button">Cancelar</button>
                 </div>
+
+                <div id="message" class="message"></div>
             </form>
         </div>
     </div>
     
-    <script src="script.js"></script>
+    <script src="Funciones_crear.js"></script>
 </body>
 </html>
