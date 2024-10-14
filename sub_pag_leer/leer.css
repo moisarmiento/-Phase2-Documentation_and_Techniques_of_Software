@@ -18,7 +18,6 @@ body {
     margin-bottom: 20px;
 }
 
-
 .top-button {
     background-color: #007bff;
     color: white;
@@ -75,16 +74,4 @@ table td img {
     justify-content: flex-end;
 }
 
-.action-button {
-    background-color: #28a745;
-    color: white;
-    padding: 10px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
 
-.action-button:hover {
-    background-color: #218838;
-}

@@ -6,22 +6,42 @@
     <title>Gestión de Productos</title>
     <link rel="stylesheet" href="leer.css">
 </head>
+<style>
+    .search-button {
+        background-color: #28a745; 
+        color: white; 
+        padding: 10px 20px; 
+        border: none; 
+        cursor: pointer; 
+        border-radius: 5px; 
+        font-size: 16px;
+        transition: background-color 0.3s; 
+    }
+    .search-button:hover {
+        background-color: #5b7e63; 
+    }
+</style>
 <body>
     <div class="container">
-        <!-- Encabezado con tres botones -->
+        <!-- Encabezado  botones -->
         <div class="header">
             <button class="top-button" onclick="cargar_principal()">principal</button>
             <button class="top-button" onclick="cargar_crear()">Crear</button>
             <button class="top-button" onclick="cargar_actualizar()">Actualizar</button>
             <button class="top-button" onclick="cargar_borrar()">Borrar</button>
-            <input type="text" id="searchBar" placeholder="Buscar por codigo" class="search-bar">
+            <input type="text" id="searchBar" placeholder="Buscar por ID" class="search-bar">
+            <button id="searchButton" class="search-button">Buscar</button> 
         </div>
+
+        <!-- Resultado busqueda -->
+        <div id="resultado"></div> 
 
         <!-- Tabla de productos -->
         <div class="form-container">
             <table border="1" width="100%" cellspacing="0" cellpadding="10">
                 <thead>
                     <tr>
+                        <th>ID</th>
                         <th>Código</th>
                         <th>Nombre</th>
                         <th>Descripción</th>
@@ -31,32 +51,14 @@
                         <th>Imagen</th>
                     </tr>
                 </thead>
-                <tbody>
-                    <tr>
-                        <td>001</td>
-                        <td>Producto A</td>
-                        <td>Descripción del producto A</td>
-                        <td>Categoría 1</td>
-                        <td>Disponible</td>
-                        <td>$100</td>
-                        <td><img src="Producto_control.JPG" alt="Producto A" width="50"></td>
-                    </tr>
-                    <!-- Puedes agregar más filas según sea necesario -->
+                <tbody id="tabla-productos">
+                    <!-- Aquí se cargarán los productos mediante JavaScript -->
                 </tbody>
             </table>
-        </div>
 
-        <div class="paginacion">
-            <a href=""><<</a>
-            <a href="">1</a>
-            <a href="">2</a>
-            <a href="">3</a>
-            <a href="">4</a>
-            <a href="">5</a>
-            <a href="">6</a>
-            <a href="">>></a>
         </div>
     </div>
+
     <script src="leer.js"></script>
 </body>
 </html>
