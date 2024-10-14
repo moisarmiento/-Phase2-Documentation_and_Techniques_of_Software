@@ -22,23 +22,26 @@ function cargarProductos() {
         .then(response => response.json())
         .then(productos => {
             const tablaProductos = document.getElementById('tabla-productos');
-            tablaProductos.innerHTML = '';
+            tablaProductos.innerHTML = ''; // Limpiar la tabla antes de llenarla
 
             productos.forEach(producto => {
-                const fila = document.createElement('tr');
+                // Convertir el valor booleano de producto.Descripción a texto "Sí" o "No" 
+                const disponibilidadTexto = producto.Disponibilidad === '1' ? 'Sí' : 'No'; // Convertir disponibilidad si es necesario
 
+                const fila = document.createElement('tr');
+               
                 fila.innerHTML = `
                     <td>${producto.Codigo}</td>
                     <td>${producto.Nombre}</td>
-                    <td>${producto.Descripción}</td>
+                    <td>${producto.Descripción}</td> 
                     <td>${producto.Categoria}</td>
-                    <td>${producto.Disponibilidad}</td>
+                    <td>${disponibilidadTexto}</td> 
                     <td>${producto.Precio}</td>
                     <td><img src="${producto.Imagen}" alt="Producto" width="50"></td>
                     <td><button onclick="eliminarProducto('${producto.Codigo}')">Eliminar</button></td>
                 `;
 
-                tablaProductos.appendChild(fila);
+                tablaProductos.appendChild(fila); // Agregar la fila a la tabla
             });
         })
         .catch(error => console.error('Error al cargar los productos:', error));

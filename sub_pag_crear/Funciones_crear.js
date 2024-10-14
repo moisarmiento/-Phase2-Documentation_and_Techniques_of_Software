@@ -33,7 +33,7 @@ document.getElementById("productForm").addEventListener("submit", function(event
             // Mostrar alerta de confirmación
             if (confirm("La información fue enviada correctamente")) {
                 // Redirigir a la página de actualización si el usuario acepta
-                cargar_actualizar_si();
+                cargar_actualizar();
             }else {
                 cargar_crear();
             }
