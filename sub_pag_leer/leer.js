@@ -19,6 +19,8 @@ function cargarProductos() {
             tablaProductos.innerHTML = '';
 
             productos.forEach(producto => {
+                const disponibilidadTexto = producto.Disponibilidad === '1' || producto.Disponibilidad === true ? 'Sí' : 'No';
+
                 const fila = document.createElement('tr');
 
                 fila.innerHTML = `
@@ -27,7 +29,7 @@ function cargarProductos() {
                     <td>${producto.Nombre}</td>
                     <td>${producto.Descripción}</td>
                     <td>${producto.Categoria}</td>
-                    <td>${producto.Disponibilidad}</td>
+                    <td>${disponibilidadTexto}</td>
                     <td>${producto.Precio}</td>
                     <td><img src="${producto.Imagen}" alt="Producto" width="50"></td>
                 `;
@@ -40,8 +42,6 @@ function cargarProductos() {
 
 // Cargar productos al iniciar la página
 document.addEventListener('DOMContentLoaded', cargarProductos);
-
-
 ///////////////////////////////////
 
 document.getElementById('searchButton').addEventListener('click', function() {
@@ -53,6 +53,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
             const resultadoDiv = document.getElementById('resultado');
             resultadoDiv.innerHTML = ''; // Limpiar resultados anteriores
 
+            const disponibilidadTexto = data.producto.Disponibilidad ? 'Sí' : 'No';
             if (data.status === 'success') {
                 resultadoDiv.innerHTML = `
                     <h3>Detalles del Producto</h3>
@@ -61,7 +62,7 @@ document.getElementById('searchButton').addEventListener('click', function() {
                     <p>Nombre: ${data.producto.Nombre}</p>
                     <p>Descripción: ${data.producto.Descripción}</p>
                     <p>Categoría: ${data.producto.Categoria}</p>
-                    <p>Disponibilidad: ${data.producto.Disponibilidad}</p>
+                    <p>Disponibilidad: ${disponibilidadTexto}</p>
                     <p>Precio: ${data.producto.Precio}</p>
                 `;
             } else {

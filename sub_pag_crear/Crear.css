@@ -76,11 +76,4 @@ body {
     background-color: #218838;
 }
 
-/* Estilo del botón Cancelar (rojo) */
-.cancel-button {
-    background-color: #dc3545;
-}
 
-.cancel-button:hover {
-    background-color: #c82333;
-}
