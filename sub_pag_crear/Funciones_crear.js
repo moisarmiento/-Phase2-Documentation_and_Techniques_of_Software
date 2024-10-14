@@ -1,4 +1,5 @@
 
+// Funcion_Actualizar
 function cargar_principal() {
     window.location.href = '../Principal/Principal.html';
 }
@@ -15,8 +16,9 @@ function cargar_leer(){
     window.location.href = '../sub_pag_leer/leer.html';
 }
 
+// Evitar el envío por defecto del formulario
 document.getElementById("productForm").addEventListener("submit", function(event) {
-    event.preventDefault(); // Evitar el envío por defecto del formulario
+    event.preventDefault(); 
 
     let formData = new FormData(this);
 

@@ -1,3 +1,4 @@
+// Funciones redireccionar 
 function cargar_principal() {
     window.location.href = '../Principal/Principal.html';
 }
@@ -11,7 +12,7 @@ function cargar_leer(){
     window.location.href = '../sub_pag_leer/leer.html';
 }
 
-// Funcion_Actualizar.js
+// Funcion_Actualizar
 function loadProducts() {
     fetch('recupera_base_datos.php') 
     .then(response => response.json())

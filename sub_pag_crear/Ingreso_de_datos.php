@@ -3,7 +3,7 @@
 $servername = "localhost"; // Cambia esto si tu servidor es diferente
 $username = "root"; // Cambia esto si tu usuario es diferente
 $password = ""; // Cambia esto si tu contraseña es diferente
-$dbname = "productos_phase2"; // Tu base de datos
+$dbname = "productos_phase2"; // la base de datos
 
 // Crear conexión
 $conn = new mysqli($servername, $username, $password, $dbname);
@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     // Guardar imagen
     $imagen = $_FILES['imagen']['name'];
     $imagen_temp = $_FILES['imagen']['tmp_name'];
-    $imagen_path = "../IMAGENES/" . $imagen; // Cambia la ruta si es necesario
+    $imagen_path = "../IMAGENES/" . $imagen; 
     move_uploaded_file($imagen_temp, $imagen_path);
 
     // Insertar los datos en la tabla de productos
