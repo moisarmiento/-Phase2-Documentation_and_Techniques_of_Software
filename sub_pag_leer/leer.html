@@ -4,16 +4,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Gestión de Productos</title>
-    <link rel="stylesheet" href="Actualizar.css">
+    <link rel="stylesheet" href="leer.css">
 </head>
 <body>
     <div class="container">
         <!-- Encabezado con tres botones -->
         <div class="header">
-            <button class="top-button">Leer</button>
-            <button class="top-button">Crear</button>
-            <button class="top-button">Borrar</button>
-            <input type="text" id="searchBar" placeholder="Buscar..." class="search-bar">
+            <button class="top-button" onclick="cargar_principal()">principal</button>
+            <button class="top-button" onclick="cargar_crear()">Crear</button>
+            <button class="top-button" onclick="cargar_actualizar()">Actualizar</button>
+            <button class="top-button" onclick="cargar_borrar()">Borrar</button>
+            <input type="text" id="searchBar" placeholder="Buscar por codigo" class="search-bar">
         </div>
 
         <!-- Tabla de productos -->
@@ -56,5 +57,6 @@
             <a href="">>></a>
         </div>
     </div>
+    <script src="leer.js"></script>
 </body>
 </html>

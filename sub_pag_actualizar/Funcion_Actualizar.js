@@ -1,5 +1,14 @@
+function cargar_principal() {
+    window.location.href = '../Principal/Principal.html';
+}
 function cargar_crear() {
-    window.location.href = 'http://localhost/fase-2-unad/-Phase2-Documentation_and_Techniques_of_Software/sub_pag_crear/sub_pagina_Crear.html';
+    window.location.href = '../sub_pag_crear/sub_pagina_Crear.html';
+}
+function cargar_borrar(){
+    window.location.href = '../sub_pag_borrar/borrar.html';
+}
+function cargar_leer(){
+    window.location.href = '../sub_pag_leer/leer.html';
 }
 
 // Funcion_Actualizar.js

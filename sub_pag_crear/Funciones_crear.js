@@ -1,3 +1,20 @@
+
+function cargar_principal() {
+    window.location.href = '../Principal/Principal.html';
+}
+function cargar_actualizar() {
+    window.location.href = '../sub_pag_actualizar/sub_pagina_Actualizar.html';
+}
+function cargar_crear(){
+    window.location.href = '../sub_pag_crear/sub_pagina_Crear.html';
+}
+function cargar_borrar(){
+    window.location.href = '../sub_pag_borrar/borrar.html';
+}
+function cargar_leer(){
+    window.location.href = '../sub_pag_leer/leer.html';
+}
+
 document.getElementById("productForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Evitar el envío por defecto del formulario
 
@@ -30,10 +47,3 @@ document.getElementById("productForm").addEventListener("submit", function(event
         console.error('Error:', error);
     });
 });
-
-function cargar_actualizar_si() {
-    window.location.href = 'http://localhost/fase-2-unad/-Phase2-Documentation_and_Techniques_of_Software/sub_pag_actualizar/sub_pagina_Actualizar.html';
-}
-function cargar_crear(){
-    window.location.href = 'http://localhost/fase-2-unad/-Phase2-Documentation_and_Techniques_of_Software/sub_pag_crear/sub_pagina_Crear.html';
-}
